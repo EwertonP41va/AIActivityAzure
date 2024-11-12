@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Tradutor com IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tradutor Inteligente</h1>
+    <label for="inputText">Digite o texto para traduzir:</label>
+    <input type="text" id="inputText" placeholder="Escreva seu texto aqui">
+    <button onclick="translateText()">Traduzir Texto</button>
+
+    <h2>Ou</h2>
+    <button onclick="startSpeechToText()">Falar para Traduzir</button>
+
+    <div id="output">
+        <h2>Tradução:</h2>
+        <p id="translatedText"></p>
+        <button onclick="playTranslation()">Ouvir Tradução</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
