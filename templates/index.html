@@ -2,22 +2,42 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Tradutor com IA</title>
+    <title>Tradutor Inteligente</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Tradutor Inteligente</h1>
-    <label for="inputText">Digite o texto para traduzir:</label>
-    <input type="text" id="inputText" placeholder="Escreva seu texto aqui">
-    <button onclick="translateText()">Traduzir Texto</button>
+    <div class="container">
+        <h1><i class="fas fa-language"></i> Tradutor Inteligente</h1>
+        
+        <div class="input-section">
+            <label for="inputText">Digite o texto ou fale para traduzir:</label>
+            <input type="text" id="inputText" placeholder="Escreva seu texto aqui">
 
-    <h2>Ou</h2>
-    <button onclick="startSpeechToText()">Falar para Traduzir</button>
+            <label for="languageSelect">Escolha o idioma de tradução:</label>
+            <select id="languageSelect">
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <option value="fr">Francês</option>
+                <option value="de">Alemão</option>
+                <option value="it">Italiano</option>
+                <option value="ja">Japonês</option>
+                <option value="ko">Coreano</option>
+                <option value="pt">Português</option>
+                <option value="zh-Hans">Chinês (Simplificado)</option>
+                <option value="zh-Hant">Chinês (Tradicional)</option>
+            </select>
 
-    <div id="output">
-        <h2>Tradução:</h2>
-        <p id="translatedText"></p>
-        <button onclick="playTranslation()">Ouvir Tradução</button>
+            <button onclick="translateText()"><i class="fas fa-play"></i> Traduzir Texto</button>
+            <button onclick="startSpeechToText()"><i class="fas fa-microphone"></i> Falar para Traduzir</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Tradução:</h2>
+            <p id="translatedText"></p>
+            <button onclick="playTranslation()"><i class="fas fa-volume-up"></i> Ouvir Tradução</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
